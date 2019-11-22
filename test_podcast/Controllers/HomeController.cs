@@ -27,7 +27,7 @@ namespace test_podcast.Controllers
         {
             return View();
         }
-        public IActionResult tester()
+        public IActionResult Podcast()
         {
             return View();
         }
