@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using test_podcast.Data;
 using test_podcast.Models;
 
+
 namespace test_podcast.Controllers
 {
     public class LoginsController : Controller
@@ -60,7 +61,7 @@ namespace test_podcast.Controllers
             {
                 _context.Add(login);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "User");
             }
             return View(login);
         }
