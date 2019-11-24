@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Game";
+    Layout = "UserLayout";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to our Podcast!</h1>
+    <p>Hope you enjoy your stay!</p><hr />
+    <h2>Think you know your stuff?</h2>
+    <form method="post" name="quiz" class="center">
+        <label>How many books are in the Bible?</label><br />
+        <input type="radio" name="score" value="10" checked>66<br>
+        <input type="radio" name="score" value="0"> 48<br>
+        <input type="radio" name="score" value="0">37<br />
+        <label>Who was the First Man?</label><br />
+        <input type="radio" name="score1" value="0" checked>Steve<br>
+        <input type="radio" name="score1" value="10">Adam<br>
+        <input type="radio" name="score1" value="0"> Christ<br />
+        <label>How Many Books are in the Old Testament?</label><br />
+        <input type="radio" name="score2" value="0" checked>66<br>
+        <input type="radio" name="score2" value="0"> 29<br>
+        <input type="radio" name="score2" value="10">37<br />
+        <label>How many Books are in the New Testament</label><br />
+        <input type="radio" name="score3" value="0" checked> 66<br>
+        <input type="radio" name="score3" value="10">27<br>
+        <input type="radio" name="score3" value="0">39<br />
+        <label>Did you like our Quiz?</label><br />
+        <input type="radio" name="score4" value="10" checked> Yes<br>
+        <input type="radio" name="score4" value="10"> Totally<br>
+        <input type="radio" name="score4" value="10"> Of Course <br />
+        <input type="submit" name="Submit" value="Submit">
+    </form>
+
+</div>
+
+<?php
+echo "does this appear?";
+if (isset($_POST['Submit']))
+{
+    if($_POST["score"] == "10"){
+        echo $_POST["score"];
+        $q1 = 10;
+    }
+    else{
+        $q1 =0;
+    }
+    if($_POST["score1"] == "10"){
+        $q2 = 10;
+    }
+    else{
+        $q2 =0;
+    }
+    if($_POST["score2"] == "10"){
+        $q3 = 10;
+    }
+    else{
+        $q3 =0;
+    }
+    if($_POST["score3"] == "10"){
+        $q4 = 10;
+    }
+    else{
+        $q4 =0;
+    }
+    if($_POST["score4"] == "10"){
+        $q5 = 10;
+    }
+    else{
+        $q5 =0;
+    }
+
+	$total = q1+q2+q3+q4+q5;
+	echo "Your Final Score is..." . $total;
+}
+?>
