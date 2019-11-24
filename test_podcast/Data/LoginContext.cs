@@ -8,5 +8,6 @@ namespace test_podcast.Data
         {}
         
         public Microsoft.EntityFrameworkCore.DbSet<test_podcast.Models.Login> User { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<test_podcast.Models.Score> Scores { get; set; }
     }
 }
