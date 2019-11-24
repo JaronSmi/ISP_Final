@@ -1,4 +1,7 @@
 ﻿
+using System;
+using test_podcast.Models;
+
 namespace test_podcast.Data
 {
     public class LoginContext : Microsoft.EntityFrameworkCore.DbContext
@@ -8,5 +11,6 @@ namespace test_podcast.Data
         {}
         
         public Microsoft.EntityFrameworkCore.DbSet<test_podcast.Models.Login> User { get; set; }
+
     }
 }

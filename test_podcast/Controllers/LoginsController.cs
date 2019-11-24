@@ -66,6 +66,29 @@ namespace test_podcast.Controllers
             return View(login);
         }
 
+
+        public IActionResult Logon()
+        {
+            return View();
+        }
+
+        // POST: Logins/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logon([Bind("id,email,username,password")] Login login)
+        {
+            if (ModelState.IsValid)
+            {
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index", "User");
+            }
+
+
+            return NotFound();
+        }
+
         // GET: Logins/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

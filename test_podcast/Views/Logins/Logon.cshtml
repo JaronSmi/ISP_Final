@@ -1,16 +1,16 @@
-﻿@model test_podcast.Models.Login
+@model test_podcast.Models.Login
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Logon";
 }
 
-<h1>Register!</h1>
+<h1>Sign In!</h1>
 
-<h4>Create Login</h4>
+<h4>Login</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Logon">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="email" class="control-label"></label>
@@ -28,7 +28,8 @@
                 <span asp-validation-for="password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <a href="C:\Users\Jaron Smith\Documents\ISP\Final\test_podcast\Views\Logins\Logon.cshtml">C:\Users\Jaron Smith\Documents\ISP\Final\test_podcast\Views\Logins\Logon.cshtml</a>
+                <input type="submit" value="Logon" class="btn btn-primary" />
             </div>
         </form>
     </div>
