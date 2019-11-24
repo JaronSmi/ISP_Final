@@ -27,7 +27,7 @@ namespace test_podcast
         {
             services.AddControllersWithViews();
             services.AddDbContext<LoginContext>(options => 
-                    options.UseSqlServer(Configuration.GetConnectionString("LoginContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("DataContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
