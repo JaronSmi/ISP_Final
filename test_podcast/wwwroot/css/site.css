@@ -9,17 +9,20 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: deepskyblue;
 }
 
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
-  border-color: #1861ac;
+}
+
+.btn-primary:hover {
+    border-color: cyan;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
+  color: slategrey;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
@@ -44,6 +47,7 @@ html {
 
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  color: white;
 }
 
 button.accept-policy {
