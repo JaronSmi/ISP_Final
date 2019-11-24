@@ -140,35 +140,6 @@ namespace test_podcast.Controllers
             return View(login);
         }
 
-        // GET: Logins/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var login = await _context.User
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (login == null)
-            {
-                return NotFound();
-            }
-
-            return View(login);
-        }
-
-        // POST: Logins/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var login = await _context.User.FindAsync(id);
-            _context.User.Remove(login);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
         private bool LoginExists(int id)
         {
             return _context.User.Any(e => e.id == id);
