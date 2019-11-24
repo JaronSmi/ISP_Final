@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using test_podcast.Data;
 
 namespace test_podcast.Migrations
 {
     [DbContext(typeof(LoginContext))]
-    partial class LoginContextModelSnapshot : ModelSnapshot
+    [Migration("20191124014618_RequireCreate")]
+    partial class RequireCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
