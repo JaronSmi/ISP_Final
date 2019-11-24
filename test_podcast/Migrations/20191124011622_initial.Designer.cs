@@ -9,8 +9,8 @@ using test_podcast.Data;
 namespace test_podcast.Migrations
 {
     [DbContext(typeof(LoginContext))]
-    [Migration("20191123164312_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20191124011622_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,14 +31,34 @@ namespace test_podcast.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("password")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
 
                     b.Property<string>("username")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.HasKey("id");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("test_podcast.Models.Score", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("score")
+                        .HasColumnType("int");
+
+                    b.Property<string>("user")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Scores");
                 });
 #pragma warning restore 612, 618
         }
