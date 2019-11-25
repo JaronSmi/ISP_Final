@@ -65,9 +65,12 @@ namespace test_podcast.Controllers
                 date = DateTime.Now,
                 username = Username.Name
             };
+            ViewData["this_score"] = total_score;
+            // Gather all results to send to display
+            var all_results = _context.Scores.ToList();
             _context.Scores.Add(new_entry);
             await _context.SaveChangesAsync();
-            return View("Result", new_entry);
+            return View("Result", all_results);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

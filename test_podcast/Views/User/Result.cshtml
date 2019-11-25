@@ -1,13 +1,47 @@
 ﻿
-@model Quiz
-
+@model List<Quiz>
 @{
-    ViewData["Title"] = "Quiz Result";
+    ViewData["Title"] = "Your Quiz Result";
     Layout = "UserLayout";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Quiz Results</h1>
+    <h1 class="display-4">Quiz Result</h1>
     <hr style="border-color:white;">
 </div>
-<b>Score: </b> @Model.score
+<b>Your Score: </b> @ViewData["this_score"]
+<br />
+<hr style="border-color:white;">
+<h2 style="color:deepskyblue;">Other User Results: </h2>
+<br />
+
+<style>
+    th {
+        text-align: left;
+        color: deepskyblue;
+        border: solid;
+        border-color: white;
+    }
+
+    tr {
+        border: solid;
+        border-color: white;
+    }
+</style>
+
+
+<table style="width: 100%;">
+    <tr>
+        <th>Username</th>
+        <th>Score</th>
+        <th>Date</th>
+    </tr>
+    @foreach (var entry in Model)
+    {
+        <tr>
+            <td>@entry.username</td>
+            <td>@entry.score</td>
+            <td>@entry.date</td>
+        </tr>
+    }
+</table>
