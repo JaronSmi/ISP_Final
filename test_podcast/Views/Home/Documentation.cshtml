@@ -4,7 +4,7 @@
 
 <h1 class="display-4" style="text-align:center;">Technical Documentation</h1>
 
-<h3 style="color:deepskyblue;"> Architecture</h3>
+<h3 style="color:deepskyblue;">Architecture</h3>
 <p>Our multi-tier web application is constructed on the ASP.NET Core.</p>
 <ul>
     <li><b>Web Client:  </b> Browser</li>
@@ -14,7 +14,10 @@
         <ul>
             <li>Model: Three model classes are utilized for handling business logic.</li>
             <li>View:  Three separate view folders are utilized for handling UI logic.</li>
-            <li>Controller:  Three controllers are utilized for handling brower request and interfacing between View and Model.</li>
+            <li>
+                Controller:  Three controllers are utilized for handling brower request
+                and interfacing between View and Model.
+            </li>
         </ul>
 
     </li>
@@ -26,3 +29,25 @@
         </ul>
     </li>
 </ul>
+<h3 style="color:deepskyblue;">Business Logic</h3>
+<p>
+    The Business Logic is handled within our application by utilizing MVC.
+    Three controllers are utilizes (Home, Login, and User). Home is mainly utilized
+    for users who are not logged in. The Login controller handles data validation
+    and utilizes the Login model for storing results. Finally, a User controller is
+    utilizes once login has been verified. This controller grants access to additional features.
+    All three controllers return multiple different Views depending on necessary UI logic.
+</p>
+<h3 style="color:deepskyblue;">Database Design</h3>
+<p>Two SQL tables are utilized: Users and Scores. Users is utilized during Registration/Login and
+    stores username, email, and password. The username and password are each checked for specific
+    length and all attributes are constrained to NOT NULL. The Scores table utilizes an auto incrementing
+    ID, username, score, and date.
+    
+    Both database tables were created by first developing specific Model classes. Then, a migration
+    is enacted (utilizing EF Core) to convert the class definitions into syntax understandable by
+    the SQL server. The Migrations are then added and updated to alter the SQL database.</p>
+<h3 style="color:deepskyblue;">Special Features</h3>
+<p>An RSS feed (XML file) was formatted and embedded within a Javascript script to provide
+    automatic updating and instant navigation to the podcast page. Each time a new podcast/blog
+    is posted via the podcast service, this application will automatically update with links.</p>
