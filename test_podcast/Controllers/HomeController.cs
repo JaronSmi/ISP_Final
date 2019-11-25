@@ -23,15 +23,18 @@ namespace test_podcast.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Documentation()
         {
             return View();
         }
+
+        public IActionResult Help()
+        {
+            return View();
+        }
+
+
         public IActionResult Podcast()
-        {
-            return View();
-        }
-        public IActionResult Blog()
         {
             return View();
         }
