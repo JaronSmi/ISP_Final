@@ -1,0 +1,10 @@
+We used an additonal data store structure by using an RSS feed. This is an xml file that
+uses tags to encapsulate and stream various forms of media. In this case, we use it
+for mp3 and text files, to store the data and easily parse and access it on command.
+It tags the title, genre, content type, author, and website to access data, which is then
+read by parsing and presented on the webpage likewise. It allows for easy storage, transfer
+and access to large amounts of media across various platforms. The xml makes it easy for the
+author to read and explain what is happening within the file, and for the user to see what
+is being accessed just by looking at the file. These files can be interpreted with the use
+of an rss feed reader, or in our case, by writing some javascript to read and interpret
+the xml file onto the webpage for us.
