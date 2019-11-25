@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace test_podcast.Migrations
 {
@@ -13,7 +14,8 @@ namespace test_podcast.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     score = table.Column<int>(nullable: false),
-                    user = table.Column<string>(nullable: true)
+                    date = table.Column<DateTime>(nullable: false),
+                    username = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -24,15 +26,13 @@ namespace test_podcast.Migrations
                 name: "User",
                 columns: table => new
                 {
-                    id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    email = table.Column<string>(nullable: true),
-                    username = table.Column<string>(maxLength: 20, nullable: true),
-                    password = table.Column<string>(maxLength: 25, nullable: true)
+                    username = table.Column<string>(maxLength: 20, nullable: false),
+                    email = table.Column<string>(nullable: false),
+                    password = table.Column<string>(maxLength: 25, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.id);
+                    table.PrimaryKey("PK_User", x => x.username);
                 });
         }
 

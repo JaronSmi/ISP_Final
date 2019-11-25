@@ -2,8 +2,9 @@
 
 namespace test_podcast.Models
 {
-    public class Score
+    public class Quiz
     {
+        // Primary Key
         [Required]
         public int id { get; set; }
 
@@ -11,9 +12,9 @@ namespace test_podcast.Models
         public int score { get; set; }
 
         [Required]
-        public System.DateTime date { get; }
+        public System.DateTime date { get; set; }
 
         [Required]
-        public string user { get; set; }
+        public string username { get; set; }
     }
 }
