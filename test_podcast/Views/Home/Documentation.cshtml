@@ -1,7 +1,28 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Documentation";
 }
 
-<h1 class="display-4">Technical Documentation</h1>
+<h1 class="display-4" style="text-align:center;">Technical Documentation</h1>
 
+<h3 style="color:deepskyblue;"> Architecture</h3>
+<p>Our multi-tier web application is constructed on the ASP.NET Core.</p>
+<ul>
+    <li><b>Web Client:  </b> Browser</li>
+    <li><b>Web Server:  </b> Kestrel</li>
+    <li>
+        <b>Application Server:  </b> ASP.NET MVC Framework
+        <ul>
+            <li>Model: Three model classes are utilized for handling business logic.</li>
+            <li>View:  Three separate view folders are utilized for handling UI logic.</li>
+            <li>Controller:  Three controllers are utilized for handling brower request and interfacing between View and Model.</li>
+        </ul>
+
+    </li>
+    <li>
+        <b>Database Management System:  </b>
+        <ul>
+            <li>Database:    Microsoft SQL Server</li>
+            <li>Object-Relational Mapper:   Entity Framework (EF) Core</li>
+        </ul>
+    </li>
+</ul>
