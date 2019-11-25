@@ -1,0 +1,9 @@
+As an additional data store in our project, we implemented an rss feed. This utilizes an xml
+file, and embeds various media types within it, creating a stream of said medias.
+We utilized this in two ways on our project. First we did so by implementing an rss feed
+for mp3 files, which hold the podcast medias in it. This xml file uses tags to show genre,
+title, author, website of origin. We used another to store our blog feed as well, which
+worked much the same. This process allows for us to transfer, update, and process various
+medias quickly and efficiently by simply parsing through the xml file and reading the data.
+We parsed this with a simple javascript in our project, but they also can be parsed by
+rss feed readers if so desired.
