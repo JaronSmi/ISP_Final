@@ -39,15 +39,42 @@
     All three controllers return multiple different Views depending on necessary UI logic.
 </p>
 <h3 style="color:deepskyblue;">Database Design</h3>
-<p>Two SQL tables are utilized: Users and Scores. Users is utilized during Registration/Login and
+<p>
+    Two SQL tables are utilized: Users and Scores. Users is utilized during Registration/Login and
     stores username, email, and password. The username and password are each checked for specific
     length and all attributes are constrained to NOT NULL. The Scores table utilizes an auto incrementing
     ID, username, score, and date.
-    
+
     Both database tables were created by first developing specific Model classes. Then, a migration
     is enacted (utilizing EF Core) to convert the class definitions into syntax understandable by
-    the SQL server. The Migrations are then added and updated to alter the SQL database.</p>
+    the SQL server. The Migrations are then added and updated to alter the SQL database.
+</p>
 <h3 style="color:deepskyblue;">Special Features</h3>
-<p>An RSS feed (XML file) was formatted and embedded within a Javascript script to provide
+<p>
+    An RSS feed (XML file) was formatted and embedded within a Javascript script to provide
     automatic updating and instant navigation to the podcast page. Each time a new podcast/blog
-    is posted via the podcast service, this application will automatically update with links.</p>
+    is posted via the podcast service, this application will automatically update with links.
+</p>
+<h3 style="color:deepskyblue;">Members and Contributions</h3>
+<p>
+    Both team members contributed to development of various Views, Layouts, Progress Report
+    and database design. Additionally, both members routinely met up to study the ASP.NET MVC framework
+    and understand how it functions.
+</p>
+<br />
+<p><b>Andrew Welch Specifics:</b></p>
+<ul>
+    <li>Implemented Model Classes for Login and Quiz</li>
+    <li>Implemented Controllers for Home, Login, and User</li>
+    <li>Developed table schemas (DDL)</li>
+    <li>Implemented CSS</li>
+    <li>Wrote Techincal Document</li>
+</ul>
+<p><b>Jaron Smith Specifics:</b></p>
+<ul>
+    <li>Formatted XML file necessary for RSS feed</li>
+    <li>Setup hosting through Azure</li>
+    <li>Implemented User specific Layout container</li>
+    <li>Wrote Final Report</li>
+    <li>Created PowerPoint</li>
+</ul>
