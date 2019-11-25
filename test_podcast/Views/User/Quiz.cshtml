@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Quiz";
+    Layout = "UserLayout";
+}
+
+@using (Html.BeginForm("Quiz", "User"))
+{
+    <h1 class="display-4">Think You Know Your Stuff?</h1>
+    <div class="text-left">
+        <label style="color:deepskyblue;"><b>How many books are in the Bible?</b></label><br />
+        @Html.RadioButton("question_1", "10") <span>66</span><br>
+        @Html.RadioButton("question_1", "0") <span>48</span><br>
+        @Html.RadioButton("question_1", "0") <span>1</span><br>
+        @Html.RadioButton("question_1", "0") <span>37</span><br />
+        <label style="color:deepskyblue;"><b>Who was the First Man?</b></label><br />
+        @Html.RadioButton("question_2", "0") <span>Peter</span><br>
+        @Html.RadioButton("question_2", "10") <span>Adam</span><br>
+        @Html.RadioButton("question_2", "0") <span>Dwayne "The Rock" Johnson</span><br>
+        @Html.RadioButton("question_2", "0") <span>Joseph</span><br>
+        <label style="color:deepskyblue;"><b>In what city was Jesus born?</b></label><br />
+        @Html.RadioButton("question_3", "0") <span>Jerusalem</span><br>
+        @Html.RadioButton("question_3", "0") <span>Bethlehem</span><br>
+        @Html.RadioButton("question_3", "0") <span>Myrtle Beach</span><br>
+        @Html.RadioButton("question_3", "0") <span>Rome</span><br>
+        <label style="color:deepskyblue;"><b>What was Jesus's profession? </b></label><br />
+        @Html.RadioButton("question_4", "0") <span>Stone Mason</span><br>
+        @Html.RadioButton("question_4", "0") <span>Architect</span><br>
+        @Html.RadioButton("question_4", "0") <span>Carpenter</span><br>
+        @Html.RadioButton("question_4", "0") <span>Venture Capitalist</span><br>
+        <label style="color:deepskyblue;"><b>How many books are in the Old Testament? </b></label><br />
+        @Html.RadioButton("question_5", "0") <span>66</span><br>
+        @Html.RadioButton("question_5", "0") <span>19</span><br>
+        @Html.RadioButton("question_5", "0") <span>27</span><br>
+        @Html.RadioButton("question_5", "10") <span>37</span><br>
+        <label style="color:deepskyblue;"><b>How many books are in the New Testament</b></label><br />
+        @Html.RadioButton("question_6", "0") <span>37</span><br>
+        @Html.RadioButton("question_6", "10") <span>27</span><br>
+        @Html.RadioButton("question_6", "0") <span>12</span><br>
+        @Html.RadioButton("question_6", "0") <span>8</span><br>
+        <label style="color:deepskyblue;"><b>How does Judas signal Jesus's identity to the Roman officials?</b></label><br />
+        @Html.RadioButton("question_7", "10") <span>He kisses him</span><br>
+        @Html.RadioButton("question_7", "0") <span>He waves to him</span><br>
+        @Html.RadioButton("question_7", "0") <span>He hugs him and leaves a sticky note on his back</span><br>
+        @Html.RadioButton("question_7", "0") <span>He shakes his hand</span><br>
+        <input type="submit" name="Submit" value="Submit" class="btn btn-primary">
+    </div>
+
+
+
+}
+
